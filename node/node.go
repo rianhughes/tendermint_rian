@@ -894,6 +894,7 @@ func NewNode(config *cfg.Config,
 
 // OnStart starts the Node. It implements service.Service.
 func (n *Node) OnStart() error {
+	fmt.Println("STARTING NODE -------")
 	now := tmtime.Now()
 	genTime := n.genesisDoc.GenesisTime
 	if genTime.After(now) {
